@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div > </div>
+    <p1 style="color: rgb(255, 255, 255); position: relative; top: 100px; left: 730px; font-size: 100px;">charlotte chatbot! </p1>
+
+<div> </div>
+
+    <h1 id="quizQuestion" style="color: aliceblue; position: relative; top: 150px; left: 590px;"> </h1>
+<input id="userInput" style="position: relative; top: 150px; left: 590px;">
+<button onclick="submit()"  style="position: relative; top: 150px; left: 600px;">submit</button> <br>
+<h1 id="message">  </h1>
+
+
+    <script>
+    var userInput = document.getElementById("userInput");
+    var quizQuestion = document.getElementById("quizQuestion");
+    var message = document.getElementById("message");
+    var score = 0
+    var questionData = ["hiii! what's your name?" , "hi there, do you enjoy listening to music?" ]
+    var questionState = 0;
+
+    quizQuestion.innerHTML = questionData[questionState];
+
+    function submit() {
+      questionState++
+        quizQuestion.innerHTML = questionData[questionState];
+       if(userInput.value == "yes") {
+        message.innerHTML = "thats cool! Did you know that currently Taylor Swift is the leading top pop artist right now?" 
+        } else {
+            message.innerHTML = "what is your favourite genre? "
+        }
+    }
+
+    </script>
+
+
+
+
+    <style>
+body {
+    background-color: black;
+}
+
+a {
+  font-size: 50px; position: relative; top: 50px; right: -1340px;
+}
+
+
+
+
+@keyframes example {
+  0%   {background-color: rgb(241, 134, 189);}
+  25%  {background-color: rgb(255, 40, 208);}
+  25%  {background-color: rgb(113, 160, 226);}
+  30%  {background-color: rgb(19, 50, 250);}
+  40%  {background-color: rgb(170, 110, 231);}
+  100% {background-color: rgb(239, 246, 100);}
+  100% {background-color: rgb(238, 250, 1);}
+  50%   {background-color: rgb(241, 134, 189);}
+}
+
+
+   
+      div {
+  width: 1450px;
+  height: 20px;
+  background-color: rgb(241, 134, 189);
+  animation-name: example;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  position: relative; top: 100px;
+  
+}
+
+
+a:link a:visited {
+background-color: #ffffff;
+  color: white;
+  padding: 60px 60px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  
+
+}
+
+a:hover, a:active {
+  background-color: rgb(0, 255, 200);
+}
+
+
+
+    </style>
+
+</body>
+</html>
